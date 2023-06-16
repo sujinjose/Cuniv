@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    /* background: lightgray; */
+    text-align: center;
+    font-family: sans-serif;
+    color: #fefefe;
+  }
+  .container {
+    position: relative;
+    width: 320px;
+    margin: 0 auto 0 auto;
+    perspective: 1000px;
+  }
+  
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d; 
+    animation: rotate360 60s infinite forwards linear;
+  }
+  .carousel__face { 
+    position: absolute;
+    width: 300px;
+    height: 187px;
+    top: 20px;
+    left: 10px;
+    right: 10px;
+    background-size: cover;
+    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.5);
+    display: flex;
+  }
+  
+  span {
+    margin: auto;
+    font-size: 2rem;
+  }
+  
+  
+  .carousel__face:nth-child(1) {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmxg9MY1cwzYGHgxPys8uV3QZL8k7DFmA-Sg&usqp=CAU?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(  0deg) translateZ(430px); }
+  .carousel__face:nth-child(2) { 
+    background-image: url("https://images.assettype.com/fortuneindia%2F2021-07%2F7b511f3e-d8d0-4889-92ea-6b14bd3fb91c%2F2F5G14D__1_.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      transform: rotateY( 40deg) translateZ(430px); }
+  .carousel__face:nth-child(3) {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1joDi5YXtbVGcAwHVTuUy2X85EpSsgv5RWg&usqp=CAU?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY( 80deg) translateZ(430px); }
+  .carousel__face:nth-child(4) {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVIxEyadX5BHhwQoVm0S7Bnom9wdC4u9YR9g&usqp=CAU?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(120deg) translateZ(430px); }
+  .carousel__face:nth-child(5) { 
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdNs2rJcyawnwsyhgLw0RujgzZCDaHsSdGjA&usqp=CAU?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(160deg) translateZ(430px); }
+  .carousel__face:nth-child(6) { 
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCePgC7hdFJU5JMYf2ILnwkMwZ_jG3U97x9F55baq1d5ViWcUbH9DzjLorZ8Pno_ND4mU&usqp=CAU?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(200deg) translateZ(430px); }
+  .carousel__face:nth-child(7) { 
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-81h2wC_eyISBo0gcHsJP63HoymM6wZbIA&usqp=CAU?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+   transform: rotateY(240deg) translateZ(430px); }
+  .carousel__face:nth-child(8) {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT3Wmjh75fO0_TQQlL_nUWm77eLK4CPFUaow&usqp=CAU?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(280deg) translateZ(430px); }
+  .carousel__face:nth-child(9) {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaA8MOcuWFNn1-yGMQlERQI3QtNn4o24te2A&usqp=CAU?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    transform: rotateY(320deg) translateZ(430px); }
+  
+  
+  
+  @keyframes rotate360 {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(-360deg);
+    }
+  }
+  

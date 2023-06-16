@@ -1,0 +1,116 @@
+<!--Design by foolishdeveloper.com-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="landing6.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+   
+    <div class="wrapper">
+       <div class="section">
+		<div class="top_navbar">
+			<div class="hamburger">
+				<a href="#">
+					<i class="fas fa-bars"></i>
+				</a>
+			</div>
+		</div>
+		<div class="container">
+			
+		</div>
+	</div>
+        <div class="sidebar">
+                <div id="leftside-navigation" class="nano">
+            <ul>
+                <li data-page="home.html">
+                    <a href="#" class="active">
+                        <span class="icon"><i class="fas fa-home"></i></span>
+                        <span class="item">Home</span>
+                    </a>
+                </li>
+                
+                <li data-page="accounts.html">
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-desktop"></i></span>
+                        <span class="item">Accounts</span>
+                    </a>
+                </li>
+                <li data-page="manufacturing.html">
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-user-friends"></i></span>
+                        <span class="item">Manufacturing</span>
+                    </a>
+                </li>
+                <li class="sub-menu">
+                        <a href="javascript:void(0);"><i class="fa fa-table"></i><span>Learning</span><i class="arrow fa fa-angle-right pull-right"></i></a>
+                        <ul>
+                          <li data-page="learning.html"><a href="#">Domain Training</a>
+                          </li>
+                
+                          <li data-page="learning.html"><a href="#">Self Development</a>
+                          </li>
+                        </ul>
+                      </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-tachometer-alt"></i></span>
+                        <span class="item">Leadership talk</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fas fa-database"></i></span>
+                        <span class="item">Contact Us</span>
+                    </a>
+                </li>
+              
+            </ul>
+            </div>
+        </div>
+        
+    </div>
+ 
+</body>
+<script>
+
+jQuery(document).ready(function($) {
+  $("#leftside-navigation .sub-menu > a").click(function(e) {
+    $("#leftside-navigation ul ul").slideUp();
+    if (!$(this).next().is(":visible")) {
+      $(this).next().slideDown();
+    }
+    e.stopPropagation();
+  });
+});
+
+
+        
+    var hamburger = document.querySelector(".hamburger");
+        hamburger.addEventListener("click", function(){
+            document.querySelector("body").classList.toggle("active");
+        })
+        $(document).ready(function() {
+          $('.container').load('home.html');
+          document.querySelector("body").classList.toggle("active");
+        });
+
+        jQuery(document).ready(function($) {
+  $('body').on('click', '#leftside-navigation li', function() {
+    var page = $(this).data('page');
+    $('.container').load(page);
+    document.querySelector("body").classList.toggle("active");
+  });
+});
+        </script>
+</html>
